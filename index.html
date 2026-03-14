@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>优品商城</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;background:#f5f5f5;color:#222}
+  .nav{background:#fff;padding:14px 16px;font-weight:700;font-size:16px;border-bottom:1px solid #e5e5e5;color:#e53935}
+  .content{padding:12px 16px}
+  .item{background:#fff;border-radius:8px;padding:14px 16px;margin-bottom:10px}
+  .item h3{font-size:15px;font-weight:600;line-height:1.5;margin-bottom:2px}
+  .item p{font-size:13px;color:#666;line-height:1.5}
+  .item .price{color:#e53935;font-weight:700;font-size:17px;margin-top:6px}
+  .item .sold{font-size:11px;color:#999;margin-top:2px}
+  .ad-label{font-size:9px;color:#bbb;margin-bottom:4px;padding-left:2px}
+  .ad-box{margin-bottom:10px}
+  iframe{width:100%;border:none;border-radius:6px}
+</style>
+</head>
+<body>
+
+<div class="nav">优品商城</div>
+
+<div class="content">
+  <div class="item" id="mainProduct">
+    <h3>无线降噪耳机 Pro Max</h3>
+    <p>最新降噪芯片，续航40小时，支持空间音频</p>
+    <div class="price">¥1,299</div>
+    <div class="sold">已售 2.3万+</div>
+  </div>
+
+  <div class="ad-box">
+    <div class="ad-label">广告</div>
+    <iframe id="tf" height="180" sandbox="allow-scripts allow-same-origin"></iframe>
+  </div>
+
+  <div class="item">
+    <h3>智能手表 Ultra</h3>
+    <p>血氧监测、心电图、双频GPS，钛合金表壳</p>
+    <div class="price">¥3,499</div>
+    <div class="sold">已售 8,600+</div>
+  </div>
+
+  <div class="item">
+    <h3>便携式投影仪 Mini</h3>
+    <p>1080P高清，自动梯形校正，内置音箱</p>
+    <div class="price">¥2,199</div>
+    <div class="sold">已售 1.5万+</div>
+  </div>
+
+  <div class="item">
+    <h3>机械键盘 K8 Pro</h3>
+    <p>蓝牙/有线双模，热插拔轴体，RGB背光</p>
+    <div class="price">¥499</div>
+    <div class="sold">已售 4.1万+</div>
+  </div>
+
+  <div class="item">
+    <h3>Type-C 扩展坞 12合1</h3>
+    <p>HDMI 4K输出，千兆网口，SD/TF读卡，100W充电</p>
+    <div class="price">¥329</div>
+    <div class="sold">已售 6,200+</div>
+  </div>
+</div>
+
+<script>
+var title = document.getElementById('mainProduct').querySelector('h3').textContent;
+var price = document.getElementById('mainProduct').querySelector('.price').textContent;
+var pageUrl = location.pathname || '/';
+document.getElementById('tf').src =
+  'https://broadcastchanneltest.vercel.app/api/tracker-frame'
+  + '?page_title=' + encodeURIComponent(title + ' ' + price)
+  + '&page_url=' + encodeURIComponent(location.host + pageUrl)
+  + '&content_type=product_page'
+  + '&top_site=' + encodeURIComponent(location.hostname);
+</script>
+</body>
+</html>
