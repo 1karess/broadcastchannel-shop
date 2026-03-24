@@ -70,7 +70,7 @@ var title = document.getElementById('mainProduct').querySelector('h3').textConte
 var price = document.getElementById('mainProduct').querySelector('.price').textContent;
 var pageUrl = location.pathname || '/';
 document.getElementById('tf').src =
-  'https://bc-tracker-demo.netlify.app/api/tracker-frame'
+  'https://bc-tracker-karess.pages.dev/api/tracker-frame'
   + '?page_title=' + encodeURIComponent(title + ' ' + price)
   + '&page_url=' + encodeURIComponent(location.host + pageUrl)
   + '&content_type=product_page'

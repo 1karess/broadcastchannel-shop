@@ -39,14 +39,14 @@ git push -u origin main
 
 ### 4. 等待部署
 
-约 1–2 分钟后访问：`https://YOUR_USERNAME.github.io/broadcastchannel-shop/`
+约 1–2 分钟后访问：https://1karess.github.io/broadcastchannel-shop/
 
 ## 测试链接汇总
 
 | 站点 | URL | Origin |
 |------|-----|--------|
 | 新闻站 | https://site-alpha-alpha.vercel.app | vercel.app |
-| 购物站 | https://YOUR_USERNAME.github.io/broadcastchannel-shop/ | github.io |
-| Dashboard | https://broadcastchanneltest.vercel.app/dashboard | - |
+| 购物站 | https://1karess.github.io/broadcastchannel-shop/ | github.io |
+| Dashboard | https://bc-tracker-karess.pages.dev/dashboard | - |
 
 在 Facebook WebView 中先打开新闻站，再打开购物站，然后在电脑上查看 Dashboard 是否出现跨站关联数据。
